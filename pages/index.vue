@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
+    <div class="chats-layout">
+      <Messages />
+    </div>
         slack-clone-app
       </h1>
       <h2 class="subtitle">
@@ -29,23 +29,23 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Messages from '~/components/Messages'
 
 export default {
   components: {
-    Logo
+    Messages
   }
 }
 </script>
 
-<style>
+<style scoped>
 .container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  height: 100%;
+}
+
+.chats-layout {
+  overflow: scroll;
+  height: 90%;
 }
 
 .title {
