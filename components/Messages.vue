@@ -1,16 +1,6 @@
 <template>
   <div class="chats-container">
-    <Message />
-    <Message />
-    <Message />
-    <Message />
-    <Message />
-    <Message />
-    <Message />
-    <Message />
-    <Message />
-    <Message />
-    <Message />
+    <Message v-for="message in messages" :message="message" />
   </div>
 </template>
 
@@ -20,7 +10,8 @@ import Message from '~/components/Message'
 export default {
   components: {
     Message
-  }
+  },
+  props: ['messages'],
 }
 </script>
 
