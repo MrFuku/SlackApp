@@ -15,6 +15,10 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
+  buildModules: [
+    '@nuxtjs/dotenv'
+  ],
   /*
   ** Customize the progress-bar color
   */
